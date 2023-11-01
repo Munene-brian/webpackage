@@ -38,7 +38,7 @@
                 <div class="pricing my-3">
           
                   <span class="monthly display-5">KSH</span>
-                  <span class="yearly display-5">240</span>
+                  <span class="yearly display-5">40</span>
                   <small class="monthly">/Day</small>
                 </div>
                 <ul class="list-inline">
@@ -46,7 +46,30 @@
                   <li class="d-block py-2">One Day</li>
                   <li class="d-block py-2">Connect Now</li>
                 </ul>
-                <div class="bottom-btn" id="myBtn" onclick="openpop()">
+                <div class="bottom-btn" onclick="openpop('40','1 device')">
+                  <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Column -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card text-center card-shadow on-hover border-0 mb-4">
+              <div class="card-body font-14">
+                <h5 class="mt-3 mb-1 font-weight-medium">BASIC</h5>
+                <h6 class="subtitle font-weight-normal">24 HOUR UNLIMITED(1 Device)</h6>
+                <div class="pricing my-3">
+          
+                  <span class="monthly display-5">KSH</span>
+                  <span class="yearly display-5">24</span>
+                  <small class="monthly">/Day</small>
+                </div>
+                <ul class="list-inline">
+                  <li class="d-block py-2">2 Device</li>
+                  <li class="d-block py-2">One Day</li>
+                  <li class="d-block py-2">Connect Now</li>
+                </ul>
+                <div class="bottom-btn" onclick="openpop('24','2 device')">
                   <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
                 </div>
               </div>
@@ -65,34 +88,11 @@
                   <small class="monthly">/Day</small>
                 </div>
                 <ul class="list-inline">
-                  <li class="d-block py-2">1 Device</li>
+                  <li class="d-block py-2">4 Device</li>
                   <li class="d-block py-2">One Day</li>
                   <li class="d-block py-2">Connect Now</li>
                 </ul>
-                <div class="bottom-btn">
-                  <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Column -->
-          <div class="col-lg-4 col-md-6">
-            <div class="card text-center card-shadow on-hover border-0 mb-4">
-              <div class="card-body font-14">
-                <h5 class="mt-3 mb-1 font-weight-medium">BASIC</h5>
-                <h6 class="subtitle font-weight-normal">24 HOUR UNLIMITED(1 Device)</h6>
-                <div class="pricing my-3">
-          
-                  <span class="monthly display-5">KSH</span>
-                  <span class="yearly display-5">240</span>
-                  <small class="monthly">/Day</small>
-                </div>
-                <ul class="list-inline">
-                  <li class="d-block py-2">1 Device</li>
-                  <li class="d-block py-2">One Day</li>
-                  <li class="d-block py-2">Connect Now</li>
-                </ul>
-                <div class="bottom-btn">
+                <div class="bottom-btn" onclick="openpop('240','4 device')">
                   <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
                 </div>
               </div>
@@ -123,7 +123,7 @@
                   <li class="d-block py-2">One Day</li>
                   <li class="d-block py-2">Connect Now</li>
                 </ul>
-                <div class="bottom-btn">
+                <div class="bottom-btn" onclick="openpop('240','1 Device')">
                   <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
                 </div>
               </div>
@@ -138,16 +138,16 @@
                 <div class="pricing my-3">
           
                   <span class="monthly display-5">KSH</span>
-                  <span class="yearly display-5">240</span>
+                  <span class="yearly display-5">400</span>
                   <small class="monthly">/Day</small>
                 </div>
                 <ul class="list-inline">
-                  <li class="d-block py-2">1 Device</li>
+                  <li class="d-block py-2">5 Device</li>
                   <li class="d-block py-2">One Day</li>
                   <li class="d-block py-2">Connect Now</li>
   
                 </ul>
-                <div class="bottom-btn">
+                <div class="bottom-btn" onclick="openpop('400','5 Device')">
                   <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
                 </div>
               </div>
@@ -162,16 +162,15 @@
                 <div class="pricing my-3">
           
                   <span class="monthly display-5">KSH</span>
-                  <span class="yearly display-5">240</span>
+                  <span class="yearly display-5">300</span>
                   <small class="monthly">/Day</small>
                 </div>
                 <ul class="list-inline">
-                  <li class="d-block py-2">1 Device</li>
+                  <li class="d-block py-2">3 Device</li>
                   <li class="d-block py-2">One Day</li>
                   <li class="d-block py-2">Connect Now</li>
-              
                 </ul>
-                <div class="bottom-btn">
+                <div class="bottom-btn" onclick="openpop('300','3 device')">
                   <a class="btn btn-success-gradiant btn-md text-white btn-block"><span>Buy Now</span></a>
                 </div>
               </div>
@@ -259,8 +258,8 @@
                         <tbody>
                           <tr>
                             <td>ksh.</td>
-                            <td>10.00</td>
-                            <td>For 3 Hours</td>
+                            <td id ="price">10.00</td>
+                            <td id="device">Device</td>
                           </tr>
                         </tbody>
                       </table> 
@@ -278,21 +277,28 @@
 
   
     <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+
     <script>
+      
+      function openpop(price, device){
+        var modal = document.getElementById("myModal");
+        document.getElementById("price").textContent = price;
+        document.getElementById("device").textContent =device;
+        modal.style.display = "block";
+      }
       // Get the modal
       var modal = document.getElementById("myModal");
       
-      // Get the button that opens the modal
+      // Get the button that opens the modal  
       var btn = document.getElementById("myBtn");
       
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
       
       // When the user clicks the button, open the modal 
-      btn.onclick = function() {
-        modal.style.display = "block";
-      }
+      // btn.onclick = function() {
+      //   modal.style.display = "block";
+      // }
       
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
